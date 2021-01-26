@@ -22,7 +22,7 @@ var box38,box39,box40,box41,box42;
 
 
 
-var slingy;
+var slingShot;
 
 
 
@@ -88,7 +88,7 @@ box41=new Box2(1165,140,30,50);
 
 box42=new Box1(1150,90,30,50);
 
-slingy=new Slingshot(polygon.body,{x:725,y:200});
+slingShot=new Slingshot(polygon.body,{x:725,y:200});
 }
 
 function draw(){
@@ -100,7 +100,7 @@ ground1.display();
 ground2.display();
 
 polygon.display();
-slingy.display();
+slingShot.display();
 
 box1.display();
 box2.display();
@@ -164,12 +164,12 @@ Matter.Body.setPosition(polygon.body, {x: mouseX , y: mouseY});
 
 
 function mouseReleased(){
-slingshot.fly();
+slingShot.fly();
 }
 
 function keyPressed(){
     if(keyCode === 32){
-        slingshot.attach(polygon.body);
+        slingShot.attach(polygon.body);
    
     }
 }
